@@ -5,8 +5,8 @@ import Car from './Car.js';
 import Wheel from './Wheel.js';
 import AbleToTow from '../interfaces/AbleToTow.js';
 
-// TODO: The Truck class should extend the Vehicle class and should implement the AbleToTow interface
-class Truck extends Vehicle{
+// The Truck class extends the Vehicle class and implements the AbleToTow interface
+class Truck extends Vehicle implements AbleToTow {
   // TODO: Declare properties of the Truck class
   // Properties are declared with their types
   vin: string;
@@ -17,8 +17,7 @@ class Truck extends Vehicle{
   weight: number;
   topSpeed: number;
   wheels: Wheel[];
-  towingCapacity: number;
-  
+  towingCapacity: number;  
   // Constructor accepts the properties of the Truck class
 constructor(
   vin: string,
@@ -52,17 +51,35 @@ constructor(
     }
 }
   // TODO: Implement the tow method from the AbleToTow interface
-  tow(vehicle: Truck | Motorbike | Car): void {
+  tow(vehicle: Truck | Motorbike | Car): boolean {
     // TODO: Get the make an model of the vehicle if it exists
-    // TODO: Check if the vehicle's weight is less than or equal to the truck's towing capacity
-    // TODO: If it is, log that the vehicle is being towed
-    // TODO: If it is not, log that the vehicle is too heavy to be towed
+    const {make, model} = vehicle;
+    // Check if the vehicle's weight is less than or equal to the truck's towing capacity and log the appropriate message
+    if (vehicle.weight <= this.towingCapacity) {
+      console.log(`The ${make} ${model} is being towed.`);
+      return true;
+    } else {
+      console.log(`The ${make} ${model} is too heavy to be towed.`);
+      return false;
+    }
   }
 
   // TODO: Override the printDetails method from the Vehicle class
-    // TODO: The method should call the printDetails method of the parent class
-    // TODO: The method should log the details of the Truck
-    // TODO: The details should include the VIN, make, model, year, weight, top speed, color, towing capacity, and wheels
+  override printDetails(): void{
+    // Call the printDetails method of the parent class
+    super.printDetails();
+    // Log the details of the Truck
+    console.log(`VIN: ${this.vin}`);
+    console.log(`Make: ${this.make}`);
+    console.log(`Model: ${this.model}`);
+    console.log(`Year: ${this.year}`);
+    console.log(`Weight: ${this.weight} lbs`);
+    console.log(`Top Speed: ${this.topSpeed} mph`);
+    console.log(`Color: ${this.color}`);
+    console.log(`Towing Capacity: ${this.towingCapacity} lbs`);
+    console.log(`Wheels: ${this.wheels.length}`);
+  }
+
 }
 
 // Export the Truck class as the default export
