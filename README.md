@@ -26,19 +26,13 @@ Video Demo: https://app.screencastify.com/v3/watch/nIoKANrJ2Y4QXmiHWhlc
 
 Instructions on how to use application:
 
-First the user must run npm start in their terminal to trigger the first prompt, to choose between creating a new vehicle, or selecting from an existing vehicle.
+-First the user must run npm start in their terminal to trigger the first prompt, to choose between creating a new vehicle, or selecting from an existing vehicle.
 
-![alt text](photos/Screenshot#1.pdf)
+-If the user selects that they would like to create a new vehicle, it will then ask if they would like to create a car, truck or motorbike. Each vehicle type will prompt different questions, as not all vehicles have the same abilities.
 
-If the user selects that they would like to create a new vehicle, it will then ask if they would like to create a car, truck or motorbike. Each vehicle type will prompt different questions, as not all vehicles have the same abilities.
+-If the user selects "select an existing vehicle", it will display all vehicles that are currently saved in the program. 
 
-![alt text]()
-
-If the user selects "select an existing vehicle", it will display all vehicles that are currently saved in the program. 
-
-![alt text]()
-
-Once the user has either selected an existing vehicle, or created their new vehicle, they will have the ability to preform actions on the vehicle. Once the user selects the action they want to perform on their vehicle, the application will display a message showing the action was succesfully performed, or an error message will populate.
+-Once the user has either selected an existing vehicle, or created their new vehicle, they will have the ability to preform actions on the vehicle. Once the user selects the action they want to perform on their vehicle, the application will display a message showing the action was succesfully performed, or an error message will populate.
 
 
 ## Credits
