@@ -2,7 +2,7 @@
 import Vehicle from './Vehicle.js';
 import Wheel from './Wheel.js';
 
-// TODO: The Motorbike class should extend the Vehicle class
+//  The Motorbike class extends the Vehicle class
 class Motorbike extends Vehicle {
   // Declares the properties of the Motorbike class
   vin: string;
@@ -13,8 +13,7 @@ class Motorbike extends Vehicle {
   weight: number;
   topSpeed: number;
   wheels: Wheel[];
-  // TODO: Create a constructor that accepts the properties of the Motorbike class
-    // TODO: The constructor should initialize the properties of the Motorbike class
+  // The constructor initializes the properties of the Motorbike class
     constructor(
       vin: string,
       color: string,
